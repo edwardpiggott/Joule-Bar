@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave Inc. Global HR Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: '72', 'Arial', sans-serif;
+            background: #ffffff;
+            color: #1d2d3e;
+            line-height: 1.6;
+        }
+        
+        .document {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 60px 60px 60px;
+        }
+        
+        .letterhead {
+            border-bottom: 4px solid #7b2cbf;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .letterhead-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .company-logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 50%, #3c096c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .company-tagline {
+            font-size: 11px;
+            color: #556b82;
+            margin-top: 2px;
+        }
+        
+        .letterhead-address {
+            text-align: right;
+            font-size: 11px;
+            color: #556b82;
+            line-height: 1.5;
+        }
+        
+        .document-title-section {
+            text-align: center;
+            margin-bottom: 35px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(123, 44, 191, 0.05) 0%, rgba(90, 24, 154, 0.05) 100%);
+            border-radius: 8px;
+        }
+        
+        .document-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #1d2d3e;
+            margin-bottom: 8px;
+        }
+        
+        .document-meta {
+            font-size: 13px;
+            color: #556b82;
+        }
+        
+        .section {
+            margin-bottom: 28px;
+        }
+        
+        .section-number {
+            font-size: 19px;
+            font-weight: bold;
+            color: #7b2cbf;
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #1d2d3e;
+            margin-bottom: 12px;
+        }
+        
+        .subsection {
+            margin-left: 20px;
+            margin-bottom: 18px;
+        }
+        
+        .subsection-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #1d2d3e;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            font-size: 13px;
+            color: #1d2d3e;
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(123, 44, 191, 0.08) 0%, rgba(90, 24, 154, 0.08) 100%);
+            padding: 18px;
+            border-left: 4px solid #7b2cbf;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .table th,
+        .table td {
+            border: 1px solid #d9e0e6;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 13px;
+        }
+        
+        .table th {
+            background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        .table tr:nth-child(even) {
+            background: #f9f9fb;
+        }
+        
+        .table tr:hover {
+            background: rgba(123, 44, 191, 0.05);
+        }
+        
+        .important-note {
+            margin-top: 12px;
+            padding-left: 12px;
+            border-left: 3px solid #7b2cbf;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #d9e0e6;
+            text-align: center;
+            font-size: 11px;
+            color: #556b82;
+            line-height: 1.8;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+            color: #7b2cbf;
+            margin-bottom: 5px;
+        }
+        
+        .continue-button-container {
+            text-align: center;
+            margin-top: 30px;
+            padding: 30px 0 20px 0;
+        }
+        
+        .continue-button {
+            background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+            color: white;
+            border: none;
+            padding: 14px 40px;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: '72', 'Arial', sans-serif;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .continue-button:hover {
+            background: linear-gradient(135deg, #8b3ccf 0%, #6a28aa 100%);
+            box-shadow: 0 6px 16px rgba(123, 44, 191, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .continue-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3);
+        }
+    </style>
+    <script>
+        function handleContinue() {
+            // Send message to parent window to trigger scenario completion
+            window.parent.postMessage({ type: 'PDF_CONTINUE_CLICKED' }, '*');
+        }
+    </script>
+</head>
+<body>
+    <div class="document">
+        <!-- Professional Letterhead -->
+        <div class="letterhead">
+            <div class="letterhead-top">
+                <div>
+                    <div class="company-logo">TechWave Inc.</div>
+                    <div class="company-tagline">Innovating the Future of Technology</div>
+                </div>
+                <div class="letterhead-address">
+                    Clockhouse Place<br>
+                    Bedford Road<br>
+                    Middlesex, TW14 8HD<br>
+                    United Kingdom
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Title -->
+        <div class="document-title-section">
+            <div class="document-title">Global Human Resources Policy</div>
+            <div class="document-meta">Version 3.2 | Effective Date: January 1, 2025 | Document ID: HR-POL-2025-001</div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Section 1: Code of Conduct</div>
+            <div class="content">
+                All employees are expected to maintain the highest standards of professional conduct, integrity, and ethics in all business dealings. This includes treating colleagues, clients, and partners with respect and dignity.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Section 2: Compensation & Benefits</div>
+            <div class="subsection">
+                <div class="subsection-title">Section 2.1: Salary Structure</div>
+                <div class="content">
+                    TechWave Inc. maintains competitive salary structures aligned with industry standards. Annual salary reviews are conducted in Q4 of each fiscal year.
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="subsection-title">Section 2.2: Performance Bonuses</div>
+                <div class="content">
+                    Quarterly performance bonuses are awarded based on individual and team achievements. Eligibility criteria and bonus amounts are determined by department leadership in consultation with HR.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Section 3: Time Off & Leave</div>
+            <div class="subsection">
+                <div class="subsection-title">Section 3.1: Annual Leave</div>
+                <div class="content">
+                    All full-time employees receive a minimum of 25 days annual leave per year, increasing with tenure. Part-time employees receive pro-rated leave entitlements.
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="subsection-title">Section 3.2: Sick Leave</div>
+                <div class="content">
+                    Employees are entitled to paid sick leave as per local labor laws. Medical certificates may be required for absences exceeding 3 consecutive days.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Section 4: Travel & Expenses</div>
+            <div class="section-title">Section 4.5: Business Travel Policy</div>
+            
+            <div class="subsection">
+                <div class="subsection-title">Section 4.5.1: General Travel Guidelines</div>
+                <div class="content">
+                    All business travel must be pre-approved by direct managers. Employees should book travel through SAP Concur to ensure compliance with company policies and to streamline expense reporting.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">Section 4.5.2: Flight and Accommodation Standards</div>
+                <div class="content">
+                    Economy class flights are standard for trips under 6 hours. Premium economy or business class may be approved for flights exceeding 6 hours or when medically necessary. Hotel accommodations should be reasonable and within the company's negotiated rates where available.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">Section 4.5.3: Per Diem Allowances for High-Cost Cities</div>
+                <div class="highlight-box">
+                    <div class="content">
+                        <strong>Per Diem Allowances for High-Cost Metropolitan Areas</strong>
+                    </div>
+                    <div class="content">
+                        TechWave Inc. follows the U.S. General Services Administration (GSA) guidelines for per diem rates in high-cost metropolitan areas. These rates cover meals and incidental expenses (M&IE) during business travel.
+                    </div>
+                    <div class="content">
+                        The following cities are classified as high-cost and receive enhanced per diem rates:
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Daily Per Diem Rate</th>
+                            <th>Breakdown (Meals + Incidentals)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>San Francisco, CA</strong></td>
+                            <td><strong>$79</strong></td>
+                            <td>Meals: $64 | Incidentals: $15</td>
+                        </tr>
+                        <tr>
+                            <td>New York, NY</td>
+                            <td>$79</td>
+                            <td>Meals: $64 | Incidentals: $15</td>
+                        </tr>
+                        <tr>
+                            <td>Atlanta, GA</td>
+                            <td>$89</td>
+                            <td>Meals: $74 | Incidentals: $15</td>
+                        </tr>
+                        <tr>
+                            <td>Seattle, WA</td>
+                            <td>$79</td>
+                            <td>Meals: $64 | Incidentals: $15</td>
+                        </tr>
+                        <tr>
+                            <td>Boston, MA</td>
+                            <td>$79</td>
+                            <td>Meals: $64 | Incidentals: $15</td>
+                        </tr>
+                        <tr>
+                            <td>Los Angeles, CA</td>
+                            <td>$74</td>
+                            <td>Meals: $59 | Incidentals: $15</td>
+                        </tr>
+                        <tr>
+                            <td>Chicago, IL</td>
+                            <td>$79</td>
+                            <td>Meals: $64 | Incidentals: $15</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="important-note">
+                    <div class="content">
+                        <strong>Important Notes:</strong>
+                    </div>
+                    <div class="content">
+                        • Per diem rates are automatically calculated based on travel destination and duration in SAP Concur
+                    </div>
+                    <div class="content">
+                        • Employees do not need to submit individual meal receipts when claiming per diem allowances
+                    </div>
+                    <div class="content">
+                        • Per diem covers breakfast, lunch, dinner, and incidental expenses such as tips and service charges
+                    </div>
+                    <div class="content">
+                        • <strong>First and last day of travel receive 75% of the daily per diem rate</strong>
+                    </div>
+                    <div class="content">
+                        • If meals are provided as part of conferences or client meetings, per diem should be adjusted accordingly
+                    </div>
+                    <div class="content">
+                        • For extended stays (14+ days), consult with HR for adjusted rates
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">Section 4.5.4: Expense Reporting</div>
+                <div class="content">
+                    All travel expenses must be submitted within 30 days of trip completion through SAP Concur. Late submissions may result in delayed reimbursement or non-payment of expenses. Ensure all required documentation is attached to your expense report.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Section 5: Professional Development</div>
+            <div class="content">
+                TechWave Inc. encourages continuous learning and development. Employees may request funding for professional courses, certifications, and conferences relevant to their role with manager approval.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Section 6: Remote Work Policy</div>
+            <div class="content">
+                Hybrid and remote work arrangements are available based on role requirements and manager discretion. All remote work must be formalized through HR with appropriate documentation.
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">TechWave Inc.</div>
+            <div>Clockhouse Place, Bedford Road, Middlesex, TW14 8HD | United Kingdom</div>
+            <div>Human Resources Department | hr@techwave.com | +44 (0) 20 1234 5678</div>
+            <div style="margin-top: 8px;">© 2025 TechWave Inc. All Rights Reserved. | Confidential - Internal Use Only</div>
+        </div>
+
+        <!-- Continue Button -->
+        <div class="continue-button-container">
+            <button class="continue-button" onclick="handleContinue()">
+                Continue
+            </button>
+        </div>
+    </div>
+</body>
+</html>
